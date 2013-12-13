@@ -74,7 +74,7 @@ def get_tag_dictionary_from_document(
         tagPageData += '\n#### <i class="icon-tag"></i> ' + \
             k + ' [' + k + ']\n\n'
         for val in v:
-            tagPageData += "* %s\n" % (val)
+            tagPageData += "%s\n" % (val)
 
     tagListPage.setDataAsString_(tagPageData)
 

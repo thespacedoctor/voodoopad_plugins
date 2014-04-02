@@ -46,23 +46,32 @@ def get_tag_dictionary_from_document(
     tagListPage = document.pageForKey_("_tag_list")
     tagListPage.setDataAsString_("")
 
-    pagesToHide = ["skeleton_page", ]
-    tagsToHide = ["publish", "skeleton_page", ]
+    pagesToHide = ["$skeleton_page", ]
+    tagsToHide = ["$publish", "$skeleton_page", ]
 
     tagDictionary = {}
     tagPageData = "# Tag List\n\n"
     for key in document.keys():
         pageData = tagListPage.dataAsAttributedString().string()
         thisPage = document.pageForKey_(key)
+        uti = thisPage.uti()
+        if "markdown" not in uti:
+            continue
+
         theseTags = thisPage.tagNames()
 
-        if private is False and "publish" not in theseTags:
+        if len(theseTags) == 0:
+            theseTags = ["untagged"]
+
+        if private is False and "$publish" not in theseTags:
             continue
         else:
             for item in pagesToHide:
                 if item not in theseTags:
                     for tag in theseTags:
                         if tag not in tagsToHide:
+                            if tag[0] == "$":
+                                tag = tag[1:]
                             if tag in tagDictionary:
                                 tagDictionary[tag].append(key)
                             else:
@@ -71,10 +80,11 @@ def get_tag_dictionary_from_document(
     import collections
     otagDictionary = collections.OrderedDict(sorted(tagDictionary.items()))
     for k, v in otagDictionary.iteritems():
-        tagPageData += '\n#### <i class="icon-tag"></i> ' + \
-            k + ' [' + k + ']\n\n'
+
+        tagPageData += '\n#### <i class="icon-tag"></i>  ' + \
+            k + ' [' + k.replace("#", "") + ']\n\n'
         for val in v:
-            tagPageData += "%s\n" % (val)
+            tagPageData += "%s  \n" % (val)
 
     tagListPage.setDataAsString_(tagPageData)
 

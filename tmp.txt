@@ -1,0 +1,333 @@
+
+
+CAMLType()VPItem
+
+SCTExtractTitle()YAML
+
+SCTUserInterfaceItemIdentifier()None
+
+aliasAddress()None
+
+aliasDisplayNames()(
+)
+
+aliases()(
+)
+
+allPropertyKeys()(
+    displayName,
+    metaValues,
+    createdDate,
+    modifiedDate,
+    appleScriptCategoryNames,
+    uuid,
+    isEncrypted,
+    name,
+    textStorage
+)
+
+allowsWeakReference()1
+
+appleScriptCategoryNames()(
+    "$publish",
+    yaml,
+    "$cheatsheet"
+)
+
+attributeKeys()(
+    displayName,
+    metaValues,
+    createdDate,
+    modifiedDate,
+    appleScriptCategoryNames,
+    uuid,
+    isEncrypted,
+    name,
+    textStorage
+)
+
+attributes()None
+
+attributesForSaving(){
+    documentBackgroundColor = <040b7374 7265616d 74797065 6481e803 84014084 8484074e 53436f6c 6f720084 84084e53 4f626a65 63740085 84016303 84026666 010186>;
+    lastEditingComputerName = hawkman;
+    lastEditingUserName = "David Young";
+}
+
+autoContentAccessingProxy()None
+
+awakeFromNib()None
+
+cachedData()None
+
+categories()(
+    "92965be9-a9e7-415f-bab9-113fc87e87e9",
+    "caff05ce-fe21-460d-b5f1-2d30e413685c",
+    "f2beb77e-a1c0-44f7-96a7-9aef448ae58b"
+)
+
+classCode()1448108391
+
+classDescription()Class: VPItem ('VPag'), superclass: <none>
+    Implementation class: VPItem
+    Name: "page", plural name: "pages", description: <none>
+    Attribute: appleScriptCategoryNames ('catE'), type: NSArray ('list'), access: read-only
+        Name: "categories", description: "returns the category names the page is in."
+    Attribute: createdDate ('Crat'), type: NSDate ('ldt '), access: read-only
+        Name: "created", description: "The date the page was created"
+    Attribute: displayName ('Dyna'), type: NSString ('utxt'), access: read-only
+        Name: "display name", description: "returns the display name of the page."
+    Attribute: isEncrypted ('IsEn'), type: NSNumber<Bool> ('bool'), access: read-only
+        Name: "is encrypted", description: "Returns true of the page is encrypted"
+    Attribute: modifiedDate ('Lmod'), type: NSDate ('ldt '), access: read-only
+        Name: "last modified", description: "The date of the page's last modification"
+    Attribute: metaValues ('MeRd'), type: NSDictionary ('reco'), access: read-write
+        Name: "meta record", description: "The meta values for the given page."
+    Attribute: name ('pnam'), type: NSString ('utxt'), access: read-only
+        Name: "name", description: "The page's name. (name has been depreciated - use display name instead)"
+    Attribute: textStorage ('ctxt'), type: NSString ('utxt'), access: read-write
+        Name: "text", description: "The page's contents."
+    Attribute: uuid ('Uuid'), type: NSString ('utxt'), access: read-only
+        Name: "uuid", description: "returns the unique identifier of the page."
+    Default subcontainer: <none>
+    Supported command: VoodooPad.Append, method: -handleAppendStringToText:
+    Supported command: VoodooPad.RemoveCategory, method: -handleRemoveCategory:
+    Supported command: VoodooPad.AddMetaRecord, method: -handleAddMetaRecord:
+    Supported command: VoodooPad.RemoveMetaRecord, method: -handleRemoveMetaRecord:
+    Supported command: VoodooPad.Export, method: -handleAppleScriptExportPage:
+    Supported command: VoodooPad.Prepend, method: -handlePrependStringToText:
+    Supported command: VoodooPad.AddCategory, method: -handleAddToCategory:
+
+
+classForArchiver()<objective-c class VPItem at 0x102662640>
+
+classForCoder()<objective-c class VPItem at 0x102662640>
+
+classForKeyedArchiver()<objective-c class VPItem at 0x102662640>
+
+classForPortCoder()<objective-c class VPItem at 0x102662640>
+
+className()VPItem
+
+clearDataConflict()None
+
+clearProperties()None
+
+containedByKeyName()None
+
+copyMainThreadProxy()<UKMainThreadProxy: 0x60000003ca00>
+
+createdDate()2014-03-05 21:01:20 +0000
+
+data()# YAML # YAML: a human-readable data serialization format and is available for several programming languages. It is a recursive acronym for "YAML Ain't Markup Language". Early in its development, YAML was said to mean "Yet Another Markup Language"The YAML syntax was designed to be easily mapped to data types common to most high-level languages: list, associative array, and scalar. Its familiar indented outline and lean appearance make it especially suited for tasks where humans are likely to view or edit data structures, such as configuration files, dumping during debugging, and document headers (e.g. the headers found on most e-mails are very close to YAML).### Example YAML Document ###This sample document defines an associative array with 7 top level keys: one of the keys, "items", contains a 2 element array (or "list"), each element of which is itself an associative array with differing keys.    ---    receipt:     Oz-Ware Purchase Invoice    date:        2007-08-06    customer:        given:   Dorothy        family:  Gale        items:        - part_no:   A4786          descrip:   Water Bucket (Filled)          price:     1.47          quantity:  4            - part_no:   E1628          descrip:   High Heeled "Ruby" Slippers          size:      8          price:     100.27          quantity:  1        bill-to:  &id001        street: |                123 Tornado Alley                Suite 16        city:   East Centerville        state:  KS        ship-to:  *id001        specialDelivery:  >        Follow the Yellow Brick        Road to the Emerald City.        Pay no attention to the        man behind the curtain.    ...### DefinitionsNB. Whitespace indentation is used to denote structure; however tab characters are never allowed as indentation. `&` and `*`: Relational data and redundancy removal are displayed: the "ship-to" associative array content is copied from the "bill-to" associative array's content as indicated by the anchor ( & ) and reference ( * ) labels, i.e. repeated nodes are initially denoted by an ampersand ( & ) and thereafter referenced with an asterisk ( * ).`---`: Multiple documents can exist in a single file/stream and are separated by "---".`…`: An optional "..." can be used at the end of a file (useful for signaling an end in streamed communications without closing the pipe).`#`: Comments begin with the number sign ( # )`-` or `[a, b, c]`: List members are denoted by a leading hyphen ( - ) with one member per line, or enclosed in square brackets ( [ ] ) and separated by comma space ( ,   ) e.g.    [milk, pumpkin pie, eggs, juice]`:` or `{a : b, c : d}`: Associative arrays are represented using the colon space ( :   ) in the form key: value, either one per line or enclosed in curly braces ( {   } ) and separated by comma space ( ,   ) e.g.    {name: John Smith, age: 33}`" "` or `' '`: Strings (scalars) are ordinarily unquoted, but may be enclosed in double-quotes ( " ), or single-quotes ( ' ).`|` and `>`: Block scalars are delimited with indentation with optional modifiers to *preserve* ( | ) or *fold* ( > ) newlines.## Cheatsheet ##    %YAML 1.1   # Reference card    ---    Collection indicators:        '? ' : Key indicator.        ': ' : Value indicator.        '- ' : Nested series entry indicator.        ', ' : Separate in-line branch entries.        '[]' : Surround in-line series branch.        '{}' : Surround in-line keyed branch.    Scalar indicators:        '''' : Surround in-line unescaped scalar ('' escaped ').        '"'  : Surround in-line escaped scalar (see escape codes below).        '|'  : Block scalar indicator.        '>'  : Folded scalar indicator.        '-'  : Strip chomp modifier ('|-' or '>-').        '+'  : Keep chomp modifier ('|+' or '>+').        1-9  : Explicit indentation modifier ('|1' or '>2').               # Modifiers can be combined ('|2-', '>+1').    Alias indicators:        '&'  : Anchor property.        '*'  : Alias indicator.    Tag property: # Usually unspecified.        none    : Unspecified tag (automatically resolved by application).        '!'     : Non-specific tag (by default, "!!map"/"!!seq"/"!!str").        '!foo'  : Primary (by convention, means a local "!foo" tag).        '!!foo' : Secondary (by convention, means "tag:yaml.org,2002:foo").        '!h!foo': Requires "%TAG !h! <prefix>" (and then means "<prefix>foo").        '!<foo>': Verbatim tag (always means "foo").    Document indicators:        '%'  : Directive indicator.        '---': Document header.        '...': Document terminator.    Misc indicators:        ' #' : Throwaway comment indicator.        '`@' : Both reserved for future use.    Special keys:        '='  : Default "value" mapping key.        '<<' : Merge keys from another mapping.    Core types: # Default automatic tags.        '!!map' : { Hash table, dictionary, mapping }        '!!seq' : { List, array, tuple, vector, sequence }        '!!str' : Unicode string    More types:        '!!set' : { cherries, plums, apples }        '!!omap': [ one: 1, two: 2 ]    Language Independent Scalar types:        { ~, null }              : Null (no value).        [ 1234, 0x4D2, 02333 ]   : [ Decimal int, Hexadecimal int, Octal int ]        [ 1_230.15, 12.3015e+02 ]: [ Fixed float, Exponential float ]        [ .inf, -.Inf, .NAN ]    : [ Infinity (float), Negative, Not a number ]        { Y, true, Yes, ON  }    : Boolean true        { n, FALSE, No, off }    : Boolean false        ? !!binary >            R0lG...BADS=        : >-            Base 64 binary value.    Escape codes:     Numeric   : { "\x12": 8-bit, "\u1234": 16-bit, "\U00102030": 32-bit }     Protective: { "\\": '\', "\"": '"', "\ ": ' ', "\<TAB>": TAB }     C         : { "\0": NUL, "\a": BEL, "\b": BS, "\f": FF, "\n": LF, "\r": CR,                   "\t": TAB, "\v": VTAB }     Additional: { "\e": ESC, "\_": NBSP, "\N": NEL, "\L": LS, "\P": PS }    ...    
+
+dataAsFileAliasURL()None
+
+dataConflictKey()None
+
+dataHash()68452783e142ab79cec94bbcd5abb346fc8ab96e
+
+description()<VPItem: 0x7fb5594e92f0> (yaml thespacedoctor_personal.vpdoc)
+
+descriptionNoPasswords()<VPItem: 0x7fb5594e92f0> (yaml thespacedoctor_personal.vpdoc)
+
+dictionaryRepresentation(){
+    aliases =     (
+    );
+    attributes =     {
+        documentBackgroundColor = <040b7374 7265616d 74797065 6481e803 84014084 8484074e 53436f6c 6f720084 84084e53 4f626a65 63740085 84016303 84026666 010186>;
+        lastEditingComputerName = hawkman;
+        lastEditingUserName = "David Young";
+    };
+    categories =     (
+        "92965be9-a9e7-415f-bab9-113fc87e87e9",
+        "caff05ce-fe21-460d-b5f1-2d30e413685c",
+        "f2beb77e-a1c0-44f7-96a7-9aef448ae58b"
+    );
+    createdDate = "2014-03-05 21:01:20 +0000";
+    data = <23205941 4d4c2023 200d0d59 414d4c0d 3a206120 68756d61 6e2d7265 61646162 6c652064 61746120 73657269 616c697a 6174696f 6e20666f 726d6174 20616e64 20697320 61766169 6c61626c 6520666f 72207365 76657261 6c207072 6f677261 6d6d696e 67206c61 6e677561 6765732e 20497420 69732061 20726563 75727369 76652061 63726f6e 796d2066 6f722022 59414d4c 2041696e 2774204d 61726b75 70204c61 6e677561 6765222e 20456172 6c792069 6e206974 73206465 76656c6f 706d656e 742c2059 414d4c20 77617320 73616964 20746f20 6d65616e 20225965 7420416e 6f746865 72204d61 726b7570 204c616e 67756167 65220d0d 54686520 59414d4c 2073796e 74617820 77617320 64657369 676e6564 20746f20 62652065 6173696c 79206d61 70706564 20746f20 64617461 20747970 65732063 6f6d6d6f 6e20746f 206d6f73 74206869 67682d6c 6576656c 206c616e 67756167 65733a20 6c697374 2c206173 736f6369 61746976 65206172 7261792c 20616e64 20736361 6c61722e 20497473 2066616d 696c6961 7220696e 64656e74 6564206f 75746c69 6e652061 6e64206c 65616e20 61707065 6172616e 6365206d 616b6520 69742065 73706563 69616c6c 79207375 69746564 20666f72 20746173 6b732077 68657265 2068756d 616e7320 61726520 6c696b65 6c792074 6f207669 6577206f 72206564 69742064 61746120 73747275 63747572 65732c20 73756368 20617320 636f6e66 69677572 6174696f 6e206669 6c65732c 2064756d 70696e67 20647572 696e6720 64656275 6767696e 672c2061 6e642064 6f63756d 656e7420 68656164 65727320 28652e67 2e207468 65206865 61646572 7320666f 756e6420 6f6e206d 6f737420 652d6d61 696c7320 61726520 76657279 20636c6f 73652074 6f205941 4d4c292e 0d0d2323 23204578 616d706c 65205941 4d4c2044 6f63756d 656e7420 2323230d 0d546869 73207361 6d706c65 20646f63 756d656e 74206465 66696e65 7320616e 20617373 6f636961 74697665 20617272 61792077 69746820 3720746f 70206c65 76656c20 6b657973 3a206f6e 65206f66 20746865 206b6579 732c2022 6974656d 73222c20 636f6e74 61696e73 20612032 20656c65 6d656e74 20617272 61792028 6f722022 6c697374 22292c20 65616368 20656c65 6d656e74 206f6620 77686963 68206973 20697473 656c6620 616e2061 73736f63 69617469 76652061 72726179 20776974 68206469 66666572 696e6720 6b657973 2e0d0d20 2020202d 2d2d0d20 20202072 65636569 70743a20 20202020 4f7a2d57 61726520 50757263 68617365 20496e76 6f696365 0d202020 20646174 653a2020 20202020 20203230 30372d30 382d3036 0d202020 20637573 746f6d65 723a0d20 20202020 20202067 6976656e 3a202020 446f726f 7468790d 20202020 20202020 66616d69 6c793a20 2047616c 650d2020 20200d20 20202069 74656d73 3a0d2020 20202020 20202d20 70617274 5f6e6f3a 20202041 34373836 0d202020 20202020 20202064 65736372 69703a20 20205761 74657220 4275636b 65742028 46696c6c 6564290d 20202020 20202020 20207072 6963653a 20202020 20312e34 370d2020 20202020 20202020 7175616e 74697479 3a202034 0d202020 200d2020 20202020 20202d20 70617274 5f6e6f3a 20202045 31363238 0d202020 20202020 20202064 65736372 69703a20 20204869 67682048 65656c65 64202252 75627922 20536c69 70706572 730d2020 20202020 20202020 73697a65 3a202020 20202038 0d202020 20202020 20202070 72696365 3a202020 20203130 302e3237 0d202020 20202020 20202071 75616e74 6974793a 2020310d 20202020 0d202020 2062696c 6c2d746f 3a202026 69643030 310d2020 20202020 20207374 72656574 3a207c0d 20202020 20202020 20202020 20202020 31323320 546f726e 61646f20 416c6c65 790d2020 20202020 20202020 20202020 20205375 69746520 31360d20 20202020 20202063 6974793a 20202045 61737420 43656e74 65727669 6c6c650d 20202020 20202020 73746174 653a2020 4b530d20 2020200d 20202020 73686970 2d746f3a 20202a69 64303031 0d202020 200d2020 20207370 65636961 6c44656c 69766572 793a2020 3e0d2020 20202020 2020466f 6c6c6f77 20746865 2059656c 6c6f7720 42726963 6b0d2020 20202020 2020526f 61642074 6f207468 6520456d 6572616c 64204369 74792e0d 20202020 20202020 50617920 6e6f2061 7474656e 74696f6e 20746f20 7468650d 20202020 20202020 6d616e20 62656869 6e642074 68652063 75727461 696e2e0d 20202020 2e2e2e0d 0d232323 20446566 696e6974 696f6e73 0d0d4e42 2e205768 69746573 70616365 20696e64 656e7461 74696f6e 20697320 75736564 20746f20 64656e6f 74652073 74727563 74757265 3b20686f 77657665 72207461 62206368 61726163 74657273 20617265 206e6576 65722061 6c6c6f77 65642061 7320696e 64656e74 6174696f 6e2e200d 0d602660 20616e64 20602a60 0d3a2052 656c6174 696f6e61 6c206461 74612061 6e642072 6564756e 64616e63 79207265 6d6f7661 6c206172 65206469 73706c61 7965643a 20746865 20227368 69702d74 6f222061 73736f63 69617469 76652061 72726179 20636f6e 74656e74 20697320 636f7069 65642066 726f6d20 74686520 2262696c 6c2d746f 22206173 736f6369 61746976 65206172 72617927 7320636f 6e74656e 74206173 20696e64 69636174 65642062 79207468 6520616e 63686f72 20282026 20292061 6e642072 65666572 656e6365 2028202a 2029206c 6162656c 732c2069 2e652e20 72657065 61746564 206e6f64 65732061 72652069 6e697469 616c6c79 2064656e 6f746564 20627920 616e2061 6d706572 73616e64 20282026 20292061 6e642074 68657265 61667465 72207265 66657265 6e636564 20776974 6820616e 20617374 65726973 6b202820 2a20292e 0d0d602d 2d2d600d 3a204d75 6c746970 6c652064 6f63756d 656e7473 2063616e 20657869 73742069 6e206120 73696e67 6c652066 696c652f 73747265 616d2061 6e642061 72652073 65706172 61746564 20627920 222d2d2d 222e0d0d 60e280a6 600d3a20 416e206f 7074696f 6e616c20 222e2e2e 22206361 6e206265 20757365 64206174 20746865 20656e64 206f6620 61206669 6c652028 75736566 756c2066 6f722073 69676e61 6c696e67 20616e20 656e6420 696e2073 74726561 6d656420 636f6d6d 756e6963 6174696f 6e732077 6974686f 75742063 6c6f7369 6e672074 68652070 69706529 2e0d0d60 23600d3a 20436f6d 6d656e74 73206265 67696e20 77697468 20746865 206e756d 62657220 7369676e 20282023 20290d0d 602d6020 6f722060 5b612c20 622c2063 5d600d3a 204c6973 74206d65 6d626572 73206172 65206465 6e6f7465 64206279 2061206c 65616469 6e672068 79706865 6e202820 2d202920 77697468 206f6e65 206d656d 62657220 70657220 6c696e65 2c206f72 20656e63 6c6f7365 6420696e 20737175 61726520 62726163 6b657473 2028205b 205d2029 20616e64 20736570 61726174 65642062 7920636f 6d6d6120 73706163 65202820 2c202020 2920652e 672e0d0d 0d202020 205b6d69 6c6b2c20 70756d70 6b696e20 7069652c 20656767 732c206a 75696365 5d0d0d60 3a60206f 7220607b 61203a20 622c2063 203a2064 7d600d3a 20417373 6f636961 74697665 20617272 61797320 61726520 72657072 6573656e 74656420 7573696e 67207468 6520636f 6c6f6e20 73706163 65202820 3a202020 2920696e 20746865 20666f72 6d206b65 793a2076 616c7565 2c206569 74686572 206f6e65 20706572 206c696e 65206f72 20656e63 6c6f7365 6420696e 20637572 6c792062 72616365 73202820 7b202020 7d202920 616e6420 73657061 72617465 64206279 20636f6d 6d612073 70616365 2028202c 20202029 20652e67 2e0d0d0d 20202020 7b6e616d 653a204a 6f686e20 536d6974 682c2061 67653a20 33337d0d 0d602220 2260206f 72206027 2027600d 3a205374 72696e67 73202873 63616c61 72732920 61726520 6f726469 6e617269 6c792075 6e71756f 7465642c 20627574 206d6179 20626520 656e636c 6f736564 20696e20 646f7562 6c652d71 756f7465 73202820 2220292c 206f7220 73696e67 6c652d71 756f7465 73202820 2720292e 0d0d607c 6020616e 6420603e 600d3a20 426c6f63 6b207363 616c6172 73206172 65206465 6c696d69 74656420 77697468 20696e64 656e7461 74696f6e 20776974 68206f70 74696f6e 616c206d 6f646966 69657273 20746f20 2a707265 73657276 652a2028 207c2029 206f7220 2a666f6c 642a2028 203e2029 206e6577 6c696e65 732e0d0d 23232043 68656174 73686565 74202323 0d0d2020 20202559 414d4c20 312e3120 20202320 52656665 72656e63 65206361 72640d20 2020202d 2d2d0d20 20202043 6f6c6c65 6374696f 6e20696e 64696361 746f7273 3a0d2020 20202020 2020273f 2027203a 204b6579 20696e64 69636174 6f722e0d 20202020 20202020 273a2027 203a2056 616c7565 20696e64 69636174 6f722e0d 20202020 20202020 272d2027 203a204e 65737465 64207365 72696573 20656e74 72792069 6e646963 61746f72 2e0d2020 20202020 2020272c 2027203a 20536570 61726174 6520696e 2d6c696e 65206272 616e6368 20656e74 72696573 2e0d2020 20202020 2020275b 5d27203a 20537572 726f756e 6420696e 2d6c696e 65207365 72696573 20627261 6e63682e 0d202020 20202020 20277b7d 27203a20 53757272 6f756e64 20696e2d 6c696e65 206b6579 65642062 72616e63 682e0d20 20202053 63616c61 7220696e 64696361 746f7273 3a0d2020 20202020 20202727 2727203a 20537572 726f756e 6420696e 2d6c696e 6520756e 65736361 70656420 7363616c 61722028 27272065 73636170 65642027 292e0d20 20202020 20202027 22272020 3a205375 72726f75 6e642069 6e2d6c69 6e652065 73636170 65642073 63616c61 72202873 65652065 73636170 6520636f 64657320 62656c6f 77292e0d 20202020 20202020 277c2720 203a2042 6c6f636b 20736361 6c617220 696e6469 6361746f 722e0d20 20202020 20202027 3e272020 3a20466f 6c646564 20736361 6c617220 696e6469 6361746f 722e0d20 20202020 20202027 2d272020 3a205374 72697020 63686f6d 70206d6f 64696669 65722028 277c2d27 206f7220 273e2d27 292e0d20 20202020 20202027 2b272020 3a204b65 65702063 686f6d70 206d6f64 69666965 72202827 7c2b2720 6f722027 3e2b2729 2e0d2020 20202020 2020312d 3920203a 20457870 6c696369 7420696e 64656e74 6174696f 6e206d6f 64696669 65722028 277c3127 206f7220 273e3227 292e0d20 20202020 20202020 20202020 20202320 4d6f6469 66696572 73206361 6e206265 20636f6d 62696e65 64202827 7c322d27 2c20273e 2b312729 2e0d2020 2020416c 69617320 696e6469 6361746f 72733a0d 20202020 20202020 27262720 203a2041 6e63686f 72207072 6f706572 74792e0d 20202020 20202020 272a2720 203a2041 6c696173 20696e64 69636174 6f722e0d 20202020 54616720 70726f70 65727479 3a202320 55737561 6c6c7920 756e7370 65636966 6965642e 0d202020 20202020 206e6f6e 65202020 203a2055 6e737065 63696669 65642074 61672028 6175746f 6d617469 63616c6c 79207265 736f6c76 65642062 79206170 706c6963 6174696f 6e292e0d 20202020 20202020 27212720 20202020 3a204e6f 6e2d7370 65636966 69632074 61672028 62792064 65666175 6c742c20 2221216d 6170222f 22212173 6571222f 22212173 74722229 2e0d2020 20202020 20202721 666f6f27 20203a20 5072696d 61727920 28627920 636f6e76 656e7469 6f6e2c20 6d65616e 73206120 6c6f6361 6c202221 666f6f22 20746167 292e0d20 20202020 20202027 2121666f 6f27203a 20536563 6f6e6461 72792028 62792063 6f6e7665 6e74696f 6e2c206d 65616e73 20227461 673a7961 6d6c2e6f 72672c32 3030323a 666f6f22 292e0d20 20202020 20202027 21682166 6f6f273a 20526571 75697265 73202225 54414720 21682120 3c707265 6669783e 22202861 6e642074 68656e20 6d65616e 7320223c 70726566 69783e66 6f6f2229 2e0d2020 20202020 20202721 3c666f6f 3e273a20 56657262 6174696d 20746167 2028616c 77617973 206d6561 6e732022 666f6f22 292e0d20 20202044 6f63756d 656e7420 696e6469 6361746f 72733a0d 20202020 20202020 27252720 203a2044 69726563 74697665 20696e64 69636174 6f722e0d 20202020 20202020 272d2d2d 273a2044 6f63756d 656e7420 68656164 65722e0d 20202020 20202020 272e2e2e 273a2044 6f63756d 656e7420 7465726d 696e6174 6f722e0d 20202020 4d697363 20696e64 69636174 6f72733a 0d202020 20202020 20272023 27203a20 5468726f 77617761 7920636f 6d6d656e 7420696e 64696361 746f722e 0d202020 20202020 20276040 27203a20 426f7468 20726573 65727665 6420666f 72206675 74757265 20757365 2e0d2020 20205370 65636961 6c206b65 79733a0d 20202020 20202020 273d2720 203a2044 65666175 6c742022 76616c75 6522206d 61707069 6e67206b 65792e0d 20202020 20202020 273c3c27 203a204d 65726765 206b6579 73206672 6f6d2061 6e6f7468 6572206d 61707069 6e672e0d 20202020 436f7265 20747970 65733a20 23204465 6661756c 74206175 746f6d61 74696320 74616773 2e0d2020 20202020 20202721 216d6170 27203a20 7b204861 73682074 61626c65 2c206469 6374696f 6e617279 2c206d61 7070696e 67207d0d 20202020 20202020 27212173 65712720 3a207b20 4c697374 2c206172 7261792c 20747570 6c652c20 76656374 6f722c20 73657175 656e6365 207d0d20 20202020 20202027 21217374 7227203a 20556e69 636f6465 20737472 696e670d 20202020 4d6f7265 20747970 65733a0d 20202020 20202020 27212173 65742720 3a207b20 63686572 72696573 2c20706c 756d732c 20617070 6c657320 7d0d2020 20202020 20202721 216f6d61 70273a20 5b206f6e 653a2031 2c207477 6f3a2032 205d0d20 2020204c 616e6775 61676520 496e6465 70656e64 656e7420 5363616c 61722074 79706573 3a0d2020 20202020 20207b20 7e2c206e 756c6c20 7d202020 20202020 20202020 2020203a 204e756c 6c20286e 6f207661 6c756529 2e0d2020 20202020 20205b20 31323334 2c203078 3444322c 20303233 3333205d 2020203a 205b2044 6563696d 616c2069 6e742c20 48657861 64656369 6d616c20 696e742c 204f6374 616c2069 6e74205d 0d202020 20202020 205b2031 5f323330 2e31352c 2031322e 33303135 652b3032 205d3a20 5b204669 78656420 666c6f61 742c2045 78706f6e 656e7469 616c2066 6c6f6174 205d0d20 20202020 2020205b 202e696e 662c202d 2e496e66 2c202e4e 414e205d 20202020 3a205b20 496e6669 6e697479 2028666c 6f617429 2c204e65 67617469 76652c20 4e6f7420 61206e75 6d626572 205d0d20 20202020 2020207b 20592c20 74727565 2c205965 732c204f 4e20207d 20202020 3a20426f 6f6c6561 6e207472 75650d20 20202020 2020207b 206e2c20 46414c53 452c204e 6f2c206f 6666207d 20202020 3a20426f 6f6c6561 6e206661 6c73650d 20202020 20202020 3f202121 62696e61 7279203e 0d202020 20202020 20202020 2052306c 472e2e2e 42414453 3d0d2020 20202020 20203a20 3e2d0d20 20202020 20202020 20202042 61736520 36342062 696e6172 79207661 6c75652e 0d202020 20457363 61706520 636f6465 733a0d20 20202020 4e756d65 72696320 20203a20 7b20225c 78313222 3a20382d 6269742c 20225c75 31323334 223a2031 362d6269 742c2022 5c553030 31303230 3330223a 2033322d 62697420 7d0d2020 20202050 726f7465 63746976 653a207b 20225c5c 223a2027 5c272c20 225c2222 3a202722 272c2022 5c20223a 20272027 2c20225c 3c544142 3e223a20 54414220 7d0d2020 20202043 20202020 20202020 203a207b 20225c30 223a204e 554c2c20 225c6122 3a204245 4c2c2022 5c62223a 2042532c 20225c66 223a2046 462c2022 5c6e223a 204c462c 20225c72 223a2043 522c0d20 20202020 20202020 20202020 20202020 2020225c 74223a20 5441422c 20225c76 223a2056 54414220 7d0d2020 20202041 64646974 696f6e61 6c3a207b 20225c65 223a2045 53432c20 225c5f22 3a204e42 53502c20 225c4e22 3a204e45 4c2c2022 5c4c223a 204c532c 20225c50 223a2050 53207d0d 20202020 2e2e2e0d 20202020>;
+    dataHash = 68452783e142ab79cec94bbcd5abb346fc8ab96e;
+    displayName = YAML;
+    documentBackgroundColor = <040b7374 7265616d 74797065 6481e803 84014084 8484074e 53436f6c 6f720084 84084e53 4f626a65 63740085 84016303 84026666 010186>;
+    encrypted = No;
+    key = yaml;
+    metaValues =     {
+    };
+    modifiedDate = "2014-03-18 08:13:33 +0000";
+    shouldHighlightLinks = Yes;
+    skipOnExport = No;
+    uti = "net.daringfireball.markdown";
+    uuid = "4c76b0fe-3581-4e1b-870e-16e2008ce87b";
+    version = 1;
+}
+
+displayForUTI()Markdown
+
+displayName()YAML
+
+doc()<VPDocument: 0x6080001bd7a0> (thespacedoctor_personal.vpdoc)
+
+document()<VPDocument: 0x6080001bd7a0> (thespacedoctor_personal.vpdoc)
+
+documentBackgroundColor()NSCalibratedWhiteColorSpace 1 1
+
+editId()113aa357-3a1c-4a13-8b8b-fe3ea1961421
+
+encryptHint()None
+
+encryptPass()None
+
+encryptState()0
+
+encrypted()0
+
+entityName()None
+
+exposedBindings()(
+)
+
+extraData()None
+
+flushKeyBindings()None
+
+hasDataConflict()0
+
+hash()140416864129776
+
+imageSubtitle()None
+
+imageTitle()None
+
+inetURL()#%20YAML%20#%20%0D%0DYAML%0D:%20a%20human-readable%20data%20serialization%20format%20and%20is%20available%20for%20several%20programming%20languages.%20It%20is%20a%20recursive%20acronym%20for%20%22YAML%20Ain't%20Markup%20Language%22.%20Early%20in%20its%20development,%20YAML%20was%20said%20to%20mean%20%22Yet%20Another%20Markup%20Language%22%0D%0DThe%20YAML%20syntax%20was%20designed%20to%20be%20easily%20mapped%20to%20data%20types%20common%20to%20most%20high-level%20languages:%20list,%20associative%20array,%20and%20scalar.%20Its%20familiar%20indented%20outline%20and%20lean%20appearance%20make%20it%20especially%20suited%20for%20tasks%20where%20humans%20are%20likely%20to%20view%20or%20edit%20data%20structures,%20such%20as%20configuration%20files,%20dumping%20during%20debugging,%20and%20document%20headers%20(e.g.%20the%20headers%20found%20on%20most%20e-mails%20are%20very%20close%20to%20YAML).%0D%0D###%20Example%20YAML%20Document%20###%0D%0DThis%20sample%20document%20defines%20an%20associative%20array%20with%207%20top%20level%20keys:%20one%20of%20the%20keys,%20%22items%22,%20contains%20a%202%20element%20array%20(or%20%22list%22),%20each%20element%20of%20which%20is%20itself%20an%20associative%20array%20with%20differing%20keys.%0D%0D%20%20%20%20---%0D%20%20%20%20receipt:%20%20%20%20%20Oz-Ware%20Purchase%20Invoice%0D%20%20%20%20date:%20%20%20%20%20%20%20%202007-08-06%0D%20%20%20%20customer:%0D%20%20%20%20%20%20%20%20given:%20%20%20Dorothy%0D%20%20%20%20%20%20%20%20family:%20%20Gale%0D%20%20%20%20%0D%20%20%20%20items:%0D%20%20%20%20%20%20%20%20-%20part_no:%20%20%20A4786%0D%20%20%20%20%20%20%20%20%20%20descrip:%20%20%20Water%20Bucket%20(Filled)%0D%20%20%20%20%20%20%20%20%20%20price:%20%20%20%20%201.47%0D%20%20%20%20%20%20%20%20%20%20quantity:%20%204%0D%20%20%20%20%0D%20%20%20%20%20%20%20%20-%20part_no:%20%20%20E1628%0D%20%20%20%20%20%20%20%20%20%20descrip:%20%20%20High%20Heeled%20%22Ruby%22%20Slippers%0D%20%20%20%20%20%20%20%20%20%20size:%20%20%20%20%20%208%0D%20%20%20%20%20%20%20%20%20%20price:%20%20%20%20%20100.27%0D%20%20%20%20%20%20%20%20%20%20quantity:%20%201%0D%20%20%20%20%0D%20%20%20%20bill-to:%20%20&id001%0D%20%20%20%20%20%20%20%20street:%20%7C%0D%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20123%20Tornado%20Alley%0D%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20Suite%2016%0D%20%20%20%20%20%20%20%20city:%20%20%20East%20Centerville%0D%20%20%20%20%20%20%20%20state:%20%20KS%0D%20%20%20%20%0D%20%20%20%20ship-to:%20%20*id001%0D%20%20%20%20%0D%20%20%20%20specialDelivery:%20%20%3E%0D%20%20%20%20%20%20%20%20Follow%20the%20Yellow%20Brick%0D%20%20%20%20%20%20%20%20Road%20to%20the%20Emerald%20City.%0D%20%20%20%20%20%20%20%20Pay%20no%20attention%20to%20the%0D%20%20%20%20%20%20%20%20man%20behind%20the%20curtain.%0D%20%20%20%20...%0D%0D###%20Definitions%0D%0DNB.%20Whitespace%20indentation%20is%20used%20to%20denote%20structure;%20however%20tab%20characters%20are%20never%20allowed%20as%20indentation.%20%0D%0D%60&%60%20and%20%60*%60%0D:%20Relational%20data%20and%20redundancy%20removal%20are%20displayed:%20the%20%22ship-to%22%20associative%20array%20content%20is%20copied%20from%20the%20%22bill-to%22%20associative%20array's%20content%20as%20indicated%20by%20the%20anchor%20(%20&%20)%20and%20reference%20(%20*%20)%20labels,%20i.e.%20repeated%20nodes%20are%20initially%20denoted%20by%20an%20ampersand%20(%20&%20)%20and%20thereafter%20referenced%20with%20an%20asterisk%20(%20*%20).%0D%0D%60---%60%0D:%20Multiple%20documents%20can%20exist%20in%20a%20single%20file/stream%20and%20are%20separated%20by%20%22---%22.%0D%0D%60%E2%80%A6%60%0D:%20An%20optional%20%22...%22%20can%20be%20used%20at%20the%20end%20of%20a%20file%20(useful%20for%20signaling%20an%20end%20in%20streamed%20communications%20without%20closing%20the%20pipe).%0D%0D%60#%60%0D:%20Comments%20begin%20with%20the%20number%20sign%20(%20#%20)%0D%0D%60-%60%20or%20%60%5Ba,%20b,%20c%5D%60%0D:%20List%20members%20are%20denoted%20by%20a%20leading%20hyphen%20(%20-%20)%20with%20one%20member%20per%20line,%20or%20enclosed%20in%20square%20brackets%20(%20%5B%20%5D%20)%20and%20separated%20by%20comma%20space%20(%20,%20%20%20)%20e.g.%0D%0D%0D%20%20%20%20%5Bmilk,%20pumpkin%20pie,%20eggs,%20juice%5D%0D%0D%60:%60%20or%20%60%7Ba%20:%20b,%20c%20:%20d%7D%60%0D:%20Associative%20arrays%20are%20represented%20using%20the%20colon%20space%20(%20:%20%20%20)%20in%20the%20form%20key:%20value,%20either%20one%20per%20line%20or%20enclosed%20in%20curly%20braces%20(%20%7B%20%20%20%7D%20)%20and%20separated%20by%20comma%20space%20(%20,%20%20%20)%20e.g.%0D%0D%0D%20%20%20%20%7Bname:%20John%20Smith,%20age:%2033%7D%0D%0D%60%22%20%22%60%20or%20%60'%20'%60%0D:%20Strings%20(scalars)%20are%20ordinarily%20unquoted,%20but%20may%20be%20enclosed%20in%20double-quotes%20(%20%22%20),%20or%20single-quotes%20(%20'%20).%0D%0D%60%7C%60%20and%20%60%3E%60%0D:%20Block%20scalars%20are%20delimited%20with%20indentation%20with%20optional%20modifiers%20to%20*preserve*%20(%20%7C%20)%20or%20*fold*%20(%20%3E%20)%20newlines.%0D%0D##%20Cheatsheet%20##%0D%0D%20%20%20%20%YAML%201.1%20%20%20#%20Reference%20card%0D%20%20%20%20---%0D%20%20%20%20Collection%20indicators:%0D%20%20%20%20%20%20%20%20'?%20'%20:%20Key%20indicator.%0D%20%20%20%20%20%20%20%20':%20'%20:%20Value%20indicator.%0D%20%20%20%20%20%20%20%20'-%20'%20:%20Nested%20series%20entry%20indicator.%0D%20%20%20%20%20%20%20%20',%20'%20:%20Separate%20in-line%20branch%20entries.%0D%20%20%20%20%20%20%20%20'%5B%5D'%20:%20Surround%20in-line%20series%20branch.%0D%20%20%20%20%20%20%20%20'%7B%7D'%20:%20Surround%20in-line%20keyed%20branch.%0D%20%20%20%20Scalar%20indicators:%0D%20%20%20%20%20%20%20%20''''%20:%20Surround%20in-line%20unescaped%20scalar%20(''%20escaped%20').%0D%20%20%20%20%20%20%20%20'%22'%20%20:%20Surround%20in-line%20escaped%20scalar%20(see%20escape%20codes%20below).%0D%20%20%20%20%20%20%20%20'%7C'%20%20:%20Block%20scalar%20indicator.%0D%20%20%20%20%20%20%20%20'%3E'%20%20:%20Folded%20scalar%20indicator.%0D%20%20%20%20%20%20%20%20'-'%20%20:%20Strip%20chomp%20modifier%20('%7C-'%20or%20'%3E-').%0D%20%20%20%20%20%20%20%20'+'%20%20:%20Keep%20chomp%20modifier%20('%7C+'%20or%20'%3E+').%0D%20%20%20%20%20%20%20%201-9%20%20:%20Explicit%20indentation%20modifier%20('%7C1'%20or%20'%3E2').%0D%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20#%20Modifiers%20can%20be%20combined%20('%7C2-',%20'%3E+1').%0D%20%20%20%20Alias%20indicators:%0D%20%20%20%20%20%20%20%20'&'%20%20:%20Anchor%20property.%0D%20%20%20%20%20%20%20%20'*'%20%20:%20Alias%20indicator.%0D%20%20%20%20Tag%20property:%20#%20Usually%20unspecified.%0D%20%20%20%20%20%20%20%20none%20%20%20%20:%20Unspecified%20tag%20(automatically%20resolved%20by%20application).%0D%20%20%20%20%20%20%20%20'!'%20%20%20%20%20:%20Non-specific%20tag%20(by%20default,%20%22!!map%22/%22!!seq%22/%22!!str%22).%0D%20%20%20%20%20%20%20%20'!foo'%20%20:%20Primary%20(by%20convention,%20means%20a%20local%20%22!foo%22%20tag).%0D%20%20%20%20%20%20%20%20'!!foo'%20:%20Secondary%20(by%20convention,%20means%20%22tag:yaml.org,2002:foo%22).%0D%20%20%20%20%20%20%20%20'!h!foo':%20Requires%20%22%TAG%20!h!%20%3Cprefix%3E%22%20(and%20then%20means%20%22%3Cprefix%3Efoo%22).%0D%20%20%20%20%20%20%20%20'!%3Cfoo%3E':%20Verbatim%20tag%20(always%20means%20%22foo%22).%0D%20%20%20%20Document%20indicators:%0D%20%20%20%20%20%20%20%20'%'%20%20:%20Directive%20indicator.%0D%20%20%20%20%20%20%20%20'---':%20Document%20header.%0D%20%20%20%20%20%20%20%20'...':%20Document%20terminator.%0D%20%20%20%20Misc%20indicators:%0D%20%20%20%20%20%20%20%20'%20#'%20:%20Throwaway%20comment%20indicator.%0D%20%20%20%20%20%20%20%20'%60@'%20:%20Both%20reserved%20for%20future%20use.%0D%20%20%20%20Special%20keys:%0D%20%20%20%20%20%20%20%20'='%20%20:%20Default%20%22value%22%20mapping%20key.%0D%20%20%20%20%20%20%20%20'%3C%3C'%20:%20Merge%20keys%20from%20another%20mapping.%0D%20%20%20%20Core%20types:%20#%20Default%20automatic%20tags.%0D%20%20%20%20%20%20%20%20'!!map'%20:%20%7B%20Hash%20table,%20dictionary,%20mapping%20%7D%0D%20%20%20%20%20%20%20%20'!!seq'%20:%20%7B%20List,%20array,%20tuple,%20vector,%20sequence%20%7D%0D%20%20%20%20%20%20%20%20'!!str'%20:%20Unicode%20string%0D%20%20%20%20More%20types:%0D%20%20%20%20%20%20%20%20'!!set'%20:%20%7B%20cherries,%20plums,%20apples%20%7D%0D%20%20%20%20%20%20%20%20'!!omap':%20%5B%20one:%201,%20two:%202%20%5D%0D%20%20%20%20Language%20Independent%20Scalar%20types:%0D%20%20%20%20%20%20%20%20%7B%20~,%20null%20%7D%20%20%20%20%20%20%20%20%20%20%20%20%20%20:%20Null%20(no%20value).%0D%20%20%20%20%20%20%20%20%5B%201234,%200x4D2,%2002333%20%5D%20%20%20:%20%5B%20Decimal%20int,%20Hexadecimal%20int,%20Octal%20int%20%5D%0D%20%20%20%20%20%20%20%20%5B%201_230.15,%2012.3015e+02%20%5D:%20%5B%20Fixed%20float,%20Exponential%20float%20%5D%0D%20%20%20%20%20%20%20%20%5B%20.inf,%20-.Inf,%20.NAN%20%5D%20%20%20%20:%20%5B%20Infinity%20(float),%20Negative,%20Not%20a%20number%20%5D%0D%20%20%20%20%20%20%20%20%7B%20Y,%20true,%20Yes,%20ON%20%20%7D%20%20%20%20:%20Boolean%20true%0D%20%20%20%20%20%20%20%20%7B%20n,%20FALSE,%20No,%20off%20%7D%20%20%20%20:%20Boolean%20false%0D%20%20%20%20%20%20%20%20?%20!!binary%20%3E%0D%20%20%20%20%20%20%20%20%20%20%20%20R0lG...BADS=%0D%20%20%20%20%20%20%20%20:%20%3E-%0D%20%20%20%20%20%20%20%20%20%20%20%20Base%2064%20binary%20value.%0D%20%20%20%20Escape%20codes:%0D%20%20%20%20%20Numeric%20%20%20:%20%7B%20%22%5Cx12%22:%208-bit,%20%22%5Cu1234%22:%2016-bit,%20%22%5CU00102030%22:%2032-bit%20%7D%0D%20%20%20%20%20Protective:%20%7B%20%22%5C%5C%22:%20'%5C',%20%22%5C%22%22:%20'%22',%20%22%5C%20%22:%20'%20',%20%22%5C%3CTAB%3E%22:%20TAB%20%7D%0D%20%20%20%20%20C%20%20%20%20%20%20%20%20%20:%20%7B%20%22%5C0%22:%20NUL,%20%22%5Ca%22:%20BEL,%20%22%5Cb%22:%20BS,%20%22%5Cf%22:%20FF,%20%22%5Cn%22:%20LF,%20%22%5Cr%22:%20CR,%0D%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22%5Ct%22:%20TAB,%20%22%5Cv%22:%20VTAB%20%7D%0D%20%20%20%20%20Additional:%20%7B%20%22%5Ce%22:%20ESC,%20%22%5C_%22:%20NBSP,%20%22%5CN%22:%20NEL,%20%22%5CL%22:%20LS,%20%22%5CP%22:%20PS%20%7D%0D%20%20%20%20...%0D%20%20%20%20
+
+interVooodooPadPage()None
+
+isEncrypted()0
+
+isFault()0
+
+isFileAlias()0
+
+isNull()0
+
+isPageAlias()0
+
+isPlainText()1
+
+isProxy()False
+
+isRichText()0
+
+isText()1
+
+isURL()0
+
+key()yaml
+
+lastEditingComputerName()hawkman
+
+lastEditingUserName()David Young
+
+mainThreadProxy()<UKMainThreadProxy: 0x60000123ba60>
+
+mainThreadProxyNoWait()<UKMainThreadProxy: 0x60000123ba80>
+
+metaValues(){
+}
+
+modifiedDate()2014-03-18 08:13:33 +0000
+
+my_compactDescription()<VPItem: 0x7fb5594e92f0> (yaml thespacedoctor_personal.vpdoc)
+
+name()yaml
+
+newXPC()0
+
+noExport()0
+
+objectContainer()<VPDocument: 0x6080001bd7a0> (thespacedoctor_personal.vpdoc)
+
+observationInfo()0
+
+ojbcClass()<objective-c class VPItem at 0x102662640>
+
+ptext()# YAML # YAML: a human-readable data serialization format and is available for several programming languages. It is a recursive acronym for "YAML Ain't Markup Language". Early in its development, YAML was said to mean "Yet Another Markup Language"The YAML syntax was designed to be easily mapped to data types common to most high-level languages: list, associative array, and scalar. Its familiar indented outline and lean appearance make it especially suited for tasks where humans are likely to view or edit data structures, such as configuration files, dumping during debugging, and document headers (e.g. the headers found on most e-mails are very close to YAML).### Example YAML Document ###This sample document defines an associative array with 7 top level keys: one of the keys, "items", contains a 2 element array (or "list"), each element of which is itself an associative array with differing keys.    ---    receipt:     Oz-Ware Purchase Invoice    date:        2007-08-06    customer:        given:   Dorothy        family:  Gale        items:        - part_no:   A4786          descrip:   Water Bucket (Filled)          price:     1.47          quantity:  4            - part_no:   E1628          descrip:   High Heeled "Ruby" Slippers          size:      8          price:     100.27          quantity:  1        bill-to:  &id001        street: |                123 Tornado Alley                Suite 16        city:   East Centerville        state:  KS        ship-to:  *id001        specialDelivery:  >        Follow the Yellow Brick        Road to the Emerald City.        Pay no attention to the        man behind the curtain.    ...### DefinitionsNB. Whitespace indentation is used to denote structure; however tab characters are never allowed as indentation. `&` and `*`: Relational data and redundancy removal are displayed: the "ship-to" associative array content is copied from the "bill-to" associative array's content as indicated by the anchor ( & ) and reference ( * ) labels, i.e. repeated nodes are initially denoted by an ampersand ( & ) and thereafter referenced with an asterisk ( * ).`---`: Multiple documents can exist in a single file/stream and are separated by "---".`…`: An optional "..." can be used at the end of a file (useful for signaling an end in streamed communications without closing the pipe).`#`: Comments begin with the number sign ( # )`-` or `[a, b, c]`: List members are denoted by a leading hyphen ( - ) with one member per line, or enclosed in square brackets ( [ ] ) and separated by comma space ( ,   ) e.g.    [milk, pumpkin pie, eggs, juice]`:` or `{a : b, c : d}`: Associative arrays are represented using the colon space ( :   ) in the form key: value, either one per line or enclosed in curly braces ( {   } ) and separated by comma space ( ,   ) e.g.    {name: John Smith, age: 33}`" "` or `' '`: Strings (scalars) are ordinarily unquoted, but may be enclosed in double-quotes ( " ), or single-quotes ( ' ).`|` and `>`: Block scalars are delimited with indentation with optional modifiers to *preserve* ( | ) or *fold* ( > ) newlines.## Cheatsheet ##    %YAML 1.1   # Reference card    ---    Collection indicators:        '? ' : Key indicator.        ': ' : Value indicator.        '- ' : Nested series entry indicator.        ', ' : Separate in-line branch entries.        '[]' : Surround in-line series branch.        '{}' : Surround in-line keyed branch.    Scalar indicators:        '''' : Surround in-line unescaped scalar ('' escaped ').        '"'  : Surround in-line escaped scalar (see escape codes below).        '|'  : Block scalar indicator.        '>'  : Folded scalar indicator.        '-'  : Strip chomp modifier ('|-' or '>-').        '+'  : Keep chomp modifier ('|+' or '>+').        1-9  : Explicit indentation modifier ('|1' or '>2').               # Modifiers can be combined ('|2-', '>+1').    Alias indicators:        '&'  : Anchor property.        '*'  : Alias indicator.    Tag property: # Usually unspecified.        none    : Unspecified tag (automatically resolved by application).        '!'     : Non-specific tag (by default, "!!map"/"!!seq"/"!!str").        '!foo'  : Primary (by convention, means a local "!foo" tag).        '!!foo' : Secondary (by convention, means "tag:yaml.org,2002:foo").        '!h!foo': Requires "%TAG !h! <prefix>" (and then means "<prefix>foo").        '!<foo>': Verbatim tag (always means "foo").    Document indicators:        '%'  : Directive indicator.        '---': Document header.        '...': Document terminator.    Misc indicators:        ' #' : Throwaway comment indicator.        '`@' : Both reserved for future use.    Special keys:        '='  : Default "value" mapping key.        '<<' : Merge keys from another mapping.    Core types: # Default automatic tags.        '!!map' : { Hash table, dictionary, mapping }        '!!seq' : { List, array, tuple, vector, sequence }        '!!str' : Unicode string    More types:        '!!set' : { cherries, plums, apples }        '!!omap': [ one: 1, two: 2 ]    Language Independent Scalar types:        { ~, null }              : Null (no value).        [ 1234, 0x4D2, 02333 ]   : [ Decimal int, Hexadecimal int, Octal int ]        [ 1_230.15, 12.3015e+02 ]: [ Fixed float, Exponential float ]        [ .inf, -.Inf, .NAN ]    : [ Infinity (float), Negative, Not a number ]        { Y, true, Yes, ON  }    : Boolean true        { n, FALSE, No, off }    : Boolean false        ? !!binary >            R0lG...BADS=        : >-            Base 64 binary value.    Escape codes:     Numeric   : { "\x12": 8-bit, "\u1234": 16-bit, "\U00102030": 32-bit }     Protective: { "\\": '\', "\"": '"', "\ ": ' ', "\<TAB>": TAB }     C         : { "\0": NUL, "\a": BEL, "\b": BS, "\f": FF, "\n": LF, "\r": CR,                   "\t": TAB, "\v": VTAB }     Additional: { "\e": ESC, "\_": NBSP, "\N": NEL, "\L": LS, "\P": PS }    ...    
+
+registerForChangeNotifications()None
+
+release()None
+
+retainCount()1
+
+retainWeakReference()1
+
+scriptingProperties(){
+    appleScriptCategoryNames =     (
+        "$publish",
+        yaml,
+        "$cheatsheet"
+    );
+    createdDate = "2014-03-05 21:01:20 +0000";
+    displayName = YAML;
+    isEncrypted = 0;
+    metaValues =     {
+    };
+    modifiedDate = "2014-03-18 08:13:33 +0000";
+    name = yaml;
+    textStorage = "# YAML # YAML: a human-readable data serialization format and is available for several programming languages. It is a recursive acronym for \"YAML Ain't Markup Language\". Early in its development, YAML was said to mean \"Yet Another Markup Language\"The YAML syntax was designed to be easily mapped to data types common to most high-level languages: list, associative array, and scalar. Its familiar indented outline and lean appearance make it especially suited for tasks where humans are likely to view or edit data structures, such as configuration files, dumping during debugging, and document headers (e.g. the headers found on most e-mails are very close to YAML).### Example YAML Document ###This sample document defines an associative array with 7 top level keys: one of the keys, \"items\", contains a 2 element array (or \"list\"), each element of which is itself an associative array with differing keys.    ---    receipt:     Oz-Ware Purchase Invoice    date:        2007-08-06    customer:        given:   Dorothy        family:  Gale        items:        - part_no:   A4786          descrip:   Water Bucket (Filled)          price:     1.47          quantity:  4            - part_no:   E1628          descrip:   High Heeled \"Ruby\" Slippers          size:      8          price:     100.27          quantity:  1        bill-to:  &id001        street: |                123 Tornado Alley                Suite 16        city:   East Centerville        state:  KS        ship-to:  *id001        specialDelivery:  >        Follow the Yellow Brick        Road to the Emerald City.        Pay no attention to the        man behind the curtain.    ...### DefinitionsNB. Whitespace indentation is used to denote structure; however tab characters are never allowed as indentation. `&` and `*`: Relational data and redundancy removal are displayed: the \"ship-to\" associative array content is copied from the \"bill-to\" associative array's content as indicated by the anchor ( & ) and reference ( * ) labels, i.e. repeated nodes are initially denoted by an ampersand ( & ) and thereafter referenced with an asterisk ( * ).`---`: Multiple documents can exist in a single file/stream and are separated by \"---\".`\U2026`: An optional \"...\" can be used at the end of a file (useful for signaling an end in streamed communications without closing the pipe).`#`: Comments begin with the number sign ( # )`-` or `[a, b, c]`: List members are denoted by a leading hyphen ( - ) with one member per line, or enclosed in square brackets ( [ ] ) and separated by comma space ( ,   ) e.g.    [milk, pumpkin pie, eggs, juice]`:` or `{a : b, c : d}`: Associative arrays are represented using the colon space ( :   ) in the form key: value, either one per line or enclosed in curly braces ( {   } ) and separated by comma space ( ,   ) e.g.    {name: John Smith, age: 33}`\" \"` or `' '`: Strings (scalars) are ordinarily unquoted, but may be enclosed in double-quotes ( \" ), or single-quotes ( ' ).`|` and `>`: Block scalars are delimited with indentation with optional modifiers to *preserve* ( | ) or *fold* ( > ) newlines.## Cheatsheet ##    %YAML 1.1   # Reference card    ---    Collection indicators:        '? ' : Key indicator.        ': ' : Value indicator.        '- ' : Nested series entry indicator.        ', ' : Separate in-line branch entries.        '[]' : Surround in-line series branch.        '{}' : Surround in-line keyed branch.    Scalar indicators:        '''' : Surround in-line unescaped scalar ('' escaped ').        '\"'  : Surround in-line escaped scalar (see escape codes below).        '|'  : Block scalar indicator.        '>'  : Folded scalar indicator.        '-'  : Strip chomp modifier ('|-' or '>-').        '+'  : Keep chomp modifier ('|+' or '>+').        1-9  : Explicit indentation modifier ('|1' or '>2').               # Modifiers can be combined ('|2-', '>+1').    Alias indicators:        '&'  : Anchor property.        '*'  : Alias indicator.    Tag property: # Usually unspecified.        none    : Unspecified tag (automatically resolved by application).        '!'     : Non-specific tag (by default, \"!!map\"/\"!!seq\"/\"!!str\").        '!foo'  : Primary (by convention, means a local \"!foo\" tag).        '!!foo' : Secondary (by convention, means \"tag:yaml.org,2002:foo\").        '!h!foo': Requires \"%TAG !h! <prefix>\" (and then means \"<prefix>foo\").        '!<foo>': Verbatim tag (always means \"foo\").    Document indicators:        '%'  : Directive indicator.        '---': Document header.        '...': Document terminator.    Misc indicators:        ' #' : Throwaway comment indicator.        '`@' : Both reserved for future use.    Special keys:        '='  : Default \"value\" mapping key.        '<<' : Merge keys from another mapping.    Core types: # Default automatic tags.        '!!map' : { Hash table, dictionary, mapping }        '!!seq' : { List, array, tuple, vector, sequence }        '!!str' : Unicode string    More types:        '!!set' : { cherries, plums, apples }        '!!omap': [ one: 1, two: 2 ]    Language Independent Scalar types:        { ~, null }              : Null (no value).        [ 1234, 0x4D2, 02333 ]   : [ Decimal int, Hexadecimal int, Octal int ]        [ 1_230.15, 12.3015e+02 ]: [ Fixed float, Exponential float ]        [ .inf, -.Inf, .NAN ]    : [ Infinity (float), Negative, Not a number ]        { Y, true, Yes, ON  }    : Boolean true        { n, FALSE, No, off }    : Boolean false        ? !!binary >            R0lG...BADS=        : >-            Base 64 binary value.    Escape codes:     Numeric   : { \"\\x12\": 8-bit, \"\\u1234\": 16-bit, \"\\U00102030\": 32-bit }     Protective: { \"\\\\\": '\\', \"\\\"\": '\"', \"\\ \": ' ', \"\\<TAB>\": TAB }     C         : { \"\\0\": NUL, \"\\a\": BEL, \"\\b\": BS, \"\\f\": FF, \"\\n\": LF, \"\\r\": CR,                   \"\\t\": TAB, \"\\v\": VTAB }     Additional: { \"\\e\": ESC, \"\\_\": NBSP, \"\\N\": NEL, \"\\L\": LS, \"\\P\": PS }    ...    {\n    NSFont = \"\\\"LucidaGrande 12.00 pt. P [] (0x61000005eab0) fobj=0x6080003e0500, spc=3.80\\\"\";\n}";
+    uuid = "4c76b0fe-3581-4e1b-870e-16e2008ce87b";
+}
+
+shouldColorMatch()1
+
+shouldHighlightLinks()1
+
+skipOnExport()0
+
+store()<VPDataStore: 0x6000002ed900>
+
+storeAttributes()None
+
+stringData()# YAML # YAML: a human-readable data serialization format and is available for several programming languages. It is a recursive acronym for "YAML Ain't Markup Language". Early in its development, YAML was said to mean "Yet Another Markup Language"The YAML syntax was designed to be easily mapped to data types common to most high-level languages: list, associative array, and scalar. Its familiar indented outline and lean appearance make it especially suited for tasks where humans are likely to view or edit data structures, such as configuration files, dumping during debugging, and document headers (e.g. the headers found on most e-mails are very close to YAML).### Example YAML Document ###This sample document defines an associative array with 7 top level keys: one of the keys, "items", contains a 2 element array (or "list"), each element of which is itself an associative array with differing keys.    ---    receipt:     Oz-Ware Purchase Invoice    date:        2007-08-06    customer:        given:   Dorothy        family:  Gale        items:        - part_no:   A4786          descrip:   Water Bucket (Filled)          price:     1.47          quantity:  4            - part_no:   E1628          descrip:   High Heeled "Ruby" Slippers          size:      8          price:     100.27          quantity:  1        bill-to:  &id001        street: |                123 Tornado Alley                Suite 16        city:   East Centerville        state:  KS        ship-to:  *id001        specialDelivery:  >        Follow the Yellow Brick        Road to the Emerald City.        Pay no attention to the        man behind the curtain.    ...### DefinitionsNB. Whitespace indentation is used to denote structure; however tab characters are never allowed as indentation. `&` and `*`: Relational data and redundancy removal are displayed: the "ship-to" associative array content is copied from the "bill-to" associative array's content as indicated by the anchor ( & ) and reference ( * ) labels, i.e. repeated nodes are initially denoted by an ampersand ( & ) and thereafter referenced with an asterisk ( * ).`---`: Multiple documents can exist in a single file/stream and are separated by "---".`…`: An optional "..." can be used at the end of a file (useful for signaling an end in streamed communications without closing the pipe).`#`: Comments begin with the number sign ( # )`-` or `[a, b, c]`: List members are denoted by a leading hyphen ( - ) with one member per line, or enclosed in square brackets ( [ ] ) and separated by comma space ( ,   ) e.g.    [milk, pumpkin pie, eggs, juice]`:` or `{a : b, c : d}`: Associative arrays are represented using the colon space ( :   ) in the form key: value, either one per line or enclosed in curly braces ( {   } ) and separated by comma space ( ,   ) e.g.    {name: John Smith, age: 33}`" "` or `' '`: Strings (scalars) are ordinarily unquoted, but may be enclosed in double-quotes ( " ), or single-quotes ( ' ).`|` and `>`: Block scalars are delimited with indentation with optional modifiers to *preserve* ( | ) or *fold* ( > ) newlines.## Cheatsheet ##    %YAML 1.1   # Reference card    ---    Collection indicators:        '? ' : Key indicator.        ': ' : Value indicator.        '- ' : Nested series entry indicator.        ', ' : Separate in-line branch entries.        '[]' : Surround in-line series branch.        '{}' : Surround in-line keyed branch.    Scalar indicators:        '''' : Surround in-line unescaped scalar ('' escaped ').        '"'  : Surround in-line escaped scalar (see escape codes below).        '|'  : Block scalar indicator.        '>'  : Folded scalar indicator.        '-'  : Strip chomp modifier ('|-' or '>-').        '+'  : Keep chomp modifier ('|+' or '>+').        1-9  : Explicit indentation modifier ('|1' or '>2').               # Modifiers can be combined ('|2-', '>+1').    Alias indicators:        '&'  : Anchor property.        '*'  : Alias indicator.    Tag property: # Usually unspecified.        none    : Unspecified tag (automatically resolved by application).        '!'     : Non-specific tag (by default, "!!map"/"!!seq"/"!!str").        '!foo'  : Primary (by convention, means a local "!foo" tag).        '!!foo' : Secondary (by convention, means "tag:yaml.org,2002:foo").        '!h!foo': Requires "%TAG !h! <prefix>" (and then means "<prefix>foo").        '!<foo>': Verbatim tag (always means "foo").    Document indicators:        '%'  : Directive indicator.        '---': Document header.        '...': Document terminator.    Misc indicators:        ' #' : Throwaway comment indicator.        '`@' : Both reserved for future use.    Special keys:        '='  : Default "value" mapping key.        '<<' : Merge keys from another mapping.    Core types: # Default automatic tags.        '!!map' : { Hash table, dictionary, mapping }        '!!seq' : { List, array, tuple, vector, sequence }        '!!str' : Unicode string    More types:        '!!set' : { cherries, plums, apples }        '!!omap': [ one: 1, two: 2 ]    Language Independent Scalar types:        { ~, null }              : Null (no value).        [ 1234, 0x4D2, 02333 ]   : [ Decimal int, Hexadecimal int, Octal int ]        [ 1_230.15, 12.3015e+02 ]: [ Fixed float, Exponential float ]        [ .inf, -.Inf, .NAN ]    : [ Infinity (float), Negative, Not a number ]        { Y, true, Yes, ON  }    : Boolean true        { n, FALSE, No, off }    : Boolean false        ? !!binary >            R0lG...BADS=        : >-            Base 64 binary value.    Escape codes:     Numeric   : { "\x12": 8-bit, "\u1234": 16-bit, "\U00102030": 32-bit }     Protective: { "\\": '\', "\"": '"', "\ ": ' ', "\<TAB>": TAB }     C         : { "\0": NUL, "\a": BEL, "\b": BS, "\f": FF, "\n": LF, "\r": CR,                   "\t": TAB, "\v": VTAB }     Additional: { "\e": ESC, "\_": NBSP, "\N": NEL, "\L": LS, "\P": PS }    ...    
+
+superclass()<objective-c class NSObject at 0x7fff79bb1810>
+
+supportedBufferPixelFormats()None
+
+supportedRenderedTexturePixelFormats()None
+
+tagIds()(
+    "92965be9-a9e7-415f-bab9-113fc87e87e9",
+    "caff05ce-fe21-460d-b5f1-2d30e413685c",
+    "f2beb77e-a1c0-44f7-96a7-9aef448ae58b"
+)
+
+tagNames()(
+    "$cheatsheet",
+    "$publish",
+    yaml
+)
+
+title()YAML
+
+toManyRelationship()0
+
+toManyRelationshipKeys()(
+)
+
+toOneRelationshipKeys()(
+)
+
+type()page
+
+url()#%20YAML%20#%20%0D%0DYAML%0D:%20a%20human-readable%20data%20serialization%20format%20and%20is%20available%20for%20several%20programming%20languages.%20It%20is%20a%20recursive%20acronym%20for%20%22YAML%20Ain't%20Markup%20Language%22.%20Early%20in%20its%20development,%20YAML%20was%20said%20to%20mean%20%22Yet%20Another%20Markup%20Language%22%0D%0DThe%20YAML%20syntax%20was%20designed%20to%20be%20easily%20mapped%20to%20data%20types%20common%20to%20most%20high-level%20languages:%20list,%20associative%20array,%20and%20scalar.%20Its%20familiar%20indented%20outline%20and%20lean%20appearance%20make%20it%20especially%20suited%20for%20tasks%20where%20humans%20are%20likely%20to%20view%20or%20edit%20data%20structures,%20such%20as%20configuration%20files,%20dumping%20during%20debugging,%20and%20document%20headers%20(e.g.%20the%20headers%20found%20on%20most%20e-mails%20are%20very%20close%20to%20YAML).%0D%0D###%20Example%20YAML%20Document%20###%0D%0DThis%20sample%20document%20defines%20an%20associative%20array%20with%207%20top%20level%20keys:%20one%20of%20the%20keys,%20%22items%22,%20contains%20a%202%20element%20array%20(or%20%22list%22),%20each%20element%20of%20which%20is%20itself%20an%20associative%20array%20with%20differing%20keys.%0D%0D%20%20%20%20---%0D%20%20%20%20receipt:%20%20%20%20%20Oz-Ware%20Purchase%20Invoice%0D%20%20%20%20date:%20%20%20%20%20%20%20%202007-08-06%0D%20%20%20%20customer:%0D%20%20%20%20%20%20%20%20given:%20%20%20Dorothy%0D%20%20%20%20%20%20%20%20family:%20%20Gale%0D%20%20%20%20%0D%20%20%20%20items:%0D%20%20%20%20%20%20%20%20-%20part_no:%20%20%20A4786%0D%20%20%20%20%20%20%20%20%20%20descrip:%20%20%20Water%20Bucket%20(Filled)%0D%20%20%20%20%20%20%20%20%20%20price:%20%20%20%20%201.47%0D%20%20%20%20%20%20%20%20%20%20quantity:%20%204%0D%20%20%20%20%0D%20%20%20%20%20%20%20%20-%20part_no:%20%20%20E1628%0D%20%20%20%20%20%20%20%20%20%20descrip:%20%20%20High%20Heeled%20%22Ruby%22%20Slippers%0D%20%20%20%20%20%20%20%20%20%20size:%20%20%20%20%20%208%0D%20%20%20%20%20%20%20%20%20%20price:%20%20%20%20%20100.27%0D%20%20%20%20%20%20%20%20%20%20quantity:%20%201%0D%20%20%20%20%0D%20%20%20%20bill-to:%20%20&id001%0D%20%20%20%20%20%20%20%20street:%20%7C%0D%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20123%20Tornado%20Alley%0D%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20Suite%2016%0D%20%20%20%20%20%20%20%20city:%20%20%20East%20Centerville%0D%20%20%20%20%20%20%20%20state:%20%20KS%0D%20%20%20%20%0D%20%20%20%20ship-to:%20%20*id001%0D%20%20%20%20%0D%20%20%20%20specialDelivery:%20%20%3E%0D%20%20%20%20%20%20%20%20Follow%20the%20Yellow%20Brick%0D%20%20%20%20%20%20%20%20Road%20to%20the%20Emerald%20City.%0D%20%20%20%20%20%20%20%20Pay%20no%20attention%20to%20the%0D%20%20%20%20%20%20%20%20man%20behind%20the%20curtain.%0D%20%20%20%20...%0D%0D###%20Definitions%0D%0DNB.%20Whitespace%20indentation%20is%20used%20to%20denote%20structure;%20however%20tab%20characters%20are%20never%20allowed%20as%20indentation.%20%0D%0D%60&%60%20and%20%60*%60%0D:%20Relational%20data%20and%20redundancy%20removal%20are%20displayed:%20the%20%22ship-to%22%20associative%20array%20content%20is%20copied%20from%20the%20%22bill-to%22%20associative%20array's%20content%20as%20indicated%20by%20the%20anchor%20(%20&%20)%20and%20reference%20(%20*%20)%20labels,%20i.e.%20repeated%20nodes%20are%20initially%20denoted%20by%20an%20ampersand%20(%20&%20)%20and%20thereafter%20referenced%20with%20an%20asterisk%20(%20*%20).%0D%0D%60---%60%0D:%20Multiple%20documents%20can%20exist%20in%20a%20single%20file/stream%20and%20are%20separated%20by%20%22---%22.%0D%0D%60%E2%80%A6%60%0D:%20An%20optional%20%22...%22%20can%20be%20used%20at%20the%20end%20of%20a%20file%20(useful%20for%20signaling%20an%20end%20in%20streamed%20communications%20without%20closing%20the%20pipe).%0D%0D%60#%60%0D:%20Comments%20begin%20with%20the%20number%20sign%20(%20#%20)%0D%0D%60-%60%20or%20%60%5Ba,%20b,%20c%5D%60%0D:%20List%20members%20are%20denoted%20by%20a%20leading%20hyphen%20(%20-%20)%20with%20one%20member%20per%20line,%20or%20enclosed%20in%20square%20brackets%20(%20%5B%20%5D%20)%20and%20separated%20by%20comma%20space%20(%20,%20%20%20)%20e.g.%0D%0D%0D%20%20%20%20%5Bmilk,%20pumpkin%20pie,%20eggs,%20juice%5D%0D%0D%60:%60%20or%20%60%7Ba%20:%20b,%20c%20:%20d%7D%60%0D:%20Associative%20arrays%20are%20represented%20using%20the%20colon%20space%20(%20:%20%20%20)%20in%20the%20form%20key:%20value,%20either%20one%20per%20line%20or%20enclosed%20in%20curly%20braces%20(%20%7B%20%20%20%7D%20)%20and%20separated%20by%20comma%20space%20(%20,%20%20%20)%20e.g.%0D%0D%0D%20%20%20%20%7Bname:%20John%20Smith,%20age:%2033%7D%0D%0D%60%22%20%22%60%20or%20%60'%20'%60%0D:%20Strings%20(scalars)%20are%20ordinarily%20unquoted,%20but%20may%20be%20enclosed%20in%20double-quotes%20(%20%22%20),%20or%20single-quotes%20(%20'%20).%0D%0D%60%7C%60%20and%20%60%3E%60%0D:%20Block%20scalars%20are%20delimited%20with%20indentation%20with%20optional%20modifiers%20to%20*preserve*%20(%20%7C%20)%20or%20*fold*%20(%20%3E%20)%20newlines.%0D%0D##%20Cheatsheet%20##%0D%0D%20%20%20%20%YAML%201.1%20%20%20#%20Reference%20card%0D%20%20%20%20---%0D%20%20%20%20Collection%20indicators:%0D%20%20%20%20%20%20%20%20'?%20'%20:%20Key%20indicator.%0D%20%20%20%20%20%20%20%20':%20'%20:%20Value%20indicator.%0D%20%20%20%20%20%20%20%20'-%20'%20:%20Nested%20series%20entry%20indicator.%0D%20%20%20%20%20%20%20%20',%20'%20:%20Separate%20in-line%20branch%20entries.%0D%20%20%20%20%20%20%20%20'%5B%5D'%20:%20Surround%20in-line%20series%20branch.%0D%20%20%20%20%20%20%20%20'%7B%7D'%20:%20Surround%20in-line%20keyed%20branch.%0D%20%20%20%20Scalar%20indicators:%0D%20%20%20%20%20%20%20%20''''%20:%20Surround%20in-line%20unescaped%20scalar%20(''%20escaped%20').%0D%20%20%20%20%20%20%20%20'%22'%20%20:%20Surround%20in-line%20escaped%20scalar%20(see%20escape%20codes%20below).%0D%20%20%20%20%20%20%20%20'%7C'%20%20:%20Block%20scalar%20indicator.%0D%20%20%20%20%20%20%20%20'%3E'%20%20:%20Folded%20scalar%20indicator.%0D%20%20%20%20%20%20%20%20'-'%20%20:%20Strip%20chomp%20modifier%20('%7C-'%20or%20'%3E-').%0D%20%20%20%20%20%20%20%20'+'%20%20:%20Keep%20chomp%20modifier%20('%7C+'%20or%20'%3E+').%0D%20%20%20%20%20%20%20%201-9%20%20:%20Explicit%20indentation%20modifier%20('%7C1'%20or%20'%3E2').%0D%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20#%20Modifiers%20can%20be%20combined%20('%7C2-',%20'%3E+1').%0D%20%20%20%20Alias%20indicators:%0D%20%20%20%20%20%20%20%20'&'%20%20:%20Anchor%20property.%0D%20%20%20%20%20%20%20%20'*'%20%20:%20Alias%20indicator.%0D%20%20%20%20Tag%20property:%20#%20Usually%20unspecified.%0D%20%20%20%20%20%20%20%20none%20%20%20%20:%20Unspecified%20tag%20(automatically%20resolved%20by%20application).%0D%20%20%20%20%20%20%20%20'!'%20%20%20%20%20:%20Non-specific%20tag%20(by%20default,%20%22!!map%22/%22!!seq%22/%22!!str%22).%0D%20%20%20%20%20%20%20%20'!foo'%20%20:%20Primary%20(by%20convention,%20means%20a%20local%20%22!foo%22%20tag).%0D%20%20%20%20%20%20%20%20'!!foo'%20:%20Secondary%20(by%20convention,%20means%20%22tag:yaml.org,2002:foo%22).%0D%20%20%20%20%20%20%20%20'!h!foo':%20Requires%20%22%TAG%20!h!%20%3Cprefix%3E%22%20(and%20then%20means%20%22%3Cprefix%3Efoo%22).%0D%20%20%20%20%20%20%20%20'!%3Cfoo%3E':%20Verbatim%20tag%20(always%20means%20%22foo%22).%0D%20%20%20%20Document%20indicators:%0D%20%20%20%20%20%20%20%20'%'%20%20:%20Directive%20indicator.%0D%20%20%20%20%20%20%20%20'---':%20Document%20header.%0D%20%20%20%20%20%20%20%20'...':%20Document%20terminator.%0D%20%20%20%20Misc%20indicators:%0D%20%20%20%20%20%20%20%20'%20#'%20:%20Throwaway%20comment%20indicator.%0D%20%20%20%20%20%20%20%20'%60@'%20:%20Both%20reserved%20for%20future%20use.%0D%20%20%20%20Special%20keys:%0D%20%20%20%20%20%20%20%20'='%20%20:%20Default%20%22value%22%20mapping%20key.%0D%20%20%20%20%20%20%20%20'%3C%3C'%20:%20Merge%20keys%20from%20another%20mapping.%0D%20%20%20%20Core%20types:%20#%20Default%20automatic%20tags.%0D%20%20%20%20%20%20%20%20'!!map'%20:%20%7B%20Hash%20table,%20dictionary,%20mapping%20%7D%0D%20%20%20%20%20%20%20%20'!!seq'%20:%20%7B%20List,%20array,%20tuple,%20vector,%20sequence%20%7D%0D%20%20%20%20%20%20%20%20'!!str'%20:%20Unicode%20string%0D%20%20%20%20More%20types:%0D%20%20%20%20%20%20%20%20'!!set'%20:%20%7B%20cherries,%20plums,%20apples%20%7D%0D%20%20%20%20%20%20%20%20'!!omap':%20%5B%20one:%201,%20two:%202%20%5D%0D%20%20%20%20Language%20Independent%20Scalar%20types:%0D%20%20%20%20%20%20%20%20%7B%20~,%20null%20%7D%20%20%20%20%20%20%20%20%20%20%20%20%20%20:%20Null%20(no%20value).%0D%20%20%20%20%20%20%20%20%5B%201234,%200x4D2,%2002333%20%5D%20%20%20:%20%5B%20Decimal%20int,%20Hexadecimal%20int,%20Octal%20int%20%5D%0D%20%20%20%20%20%20%20%20%5B%201_230.15,%2012.3015e+02%20%5D:%20%5B%20Fixed%20float,%20Exponential%20float%20%5D%0D%20%20%20%20%20%20%20%20%5B%20.inf,%20-.Inf,%20.NAN%20%5D%20%20%20%20:%20%5B%20Infinity%20(float),%20Negative,%20Not%20a%20number%20%5D%0D%20%20%20%20%20%20%20%20%7B%20Y,%20true,%20Yes,%20ON%20%20%7D%20%20%20%20:%20Boolean%20true%0D%20%20%20%20%20%20%20%20%7B%20n,%20FALSE,%20No,%20off%20%7D%20%20%20%20:%20Boolean%20false%0D%20%20%20%20%20%20%20%20?%20!!binary%20%3E%0D%20%20%20%20%20%20%20%20%20%20%20%20R0lG...BADS=%0D%20%20%20%20%20%20%20%20:%20%3E-%0D%20%20%20%20%20%20%20%20%20%20%20%20Base%2064%20binary%20value.%0D%20%20%20%20Escape%20codes:%0D%20%20%20%20%20Numeric%20%20%20:%20%7B%20%22%5Cx12%22:%208-bit,%20%22%5Cu1234%22:%2016-bit,%20%22%5CU00102030%22:%2032-bit%20%7D%0D%20%20%20%20%20Protective:%20%7B%20%22%5C%5C%22:%20'%5C',%20%22%5C%22%22:%20'%22',%20%22%5C%20%22:%20'%20',%20%22%5C%3CTAB%3E%22:%20TAB%20%7D%0D%20%20%20%20%20C%20%20%20%20%20%20%20%20%20:%20%7B%20%22%5C0%22:%20NUL,%20%22%5Ca%22:%20BEL,%20%22%5Cb%22:%20BS,%20%22%5Cf%22:%20FF,%20%22%5Cn%22:%20LF,%20%22%5Cr%22:%20CR,%0D%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22%5Ct%22:%20TAB,%20%22%5Cv%22:%20VTAB%20%7D%0D%20%20%20%20%20Additional:%20%7B%20%22%5Ce%22:%20ESC,%20%22%5C_%22:%20NBSP,%20%22%5CN%22:%20NEL,%20%22%5CL%22:%20LS,%20%22%5CP%22:%20PS%20%7D%0D%20%20%20%20...%0D%20%20%20%20
+
+userInterfaceItemIdentifier()None
+
+uti()net.daringfireball.markdown
+
+uuid()4c76b0fe-3581-4e1b-870e-16e2008ce87b
+
+version()1
+
+zone()<NSZone* object at 0x1096d41f8>
